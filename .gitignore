@@ -15,3 +15,4 @@ hosts.yml
 .env
 *lock*
 
+.idea

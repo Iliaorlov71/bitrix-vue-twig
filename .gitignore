@@ -16,3 +16,7 @@ hosts.yml
 *lock*
 
 .idea
+
+/sites/s1/bitrix
+/sites/s1/local
+/sites/s1/upload

@@ -121,6 +121,12 @@ npm run encore -- production   # запустить сборку для прод
 ```
 
 
+## Доработки Фронтенда
+Папка 'local/assets/script/own-js' - здесь находятся самописные js-модули, которые инклюдятся 
+либо на всех страницах (в файле 'local/assets/script/routes/common.js'), либо на конкретной
+странице (в файле 'local/assets/script/routes/_имя-страницы.js').
+
+
 
 ### Технологии
 

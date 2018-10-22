@@ -5,7 +5,7 @@
 
     <?php $APPLICATION->ShowHead()?>
 
-    <?php CJSCore::Init('jquery')?>
+    <?php CJSCore::Init('jquery2')?>
 
     <?php
         $assetManager = new Local\Util\Assets();

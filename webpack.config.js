@@ -1,5 +1,6 @@
 // webpack.config.js
-var Encore = require('@symfony/webpack-encore');
+let Encore = require('@symfony/webpack-encore');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 Encore
 // directory where all compiled assets will be stored
@@ -11,12 +12,17 @@ Encore
     // empty the outputPath dir before each build
     .cleanupOutputBeforeBuild()
 
-    // will output as web/build/app.js
+    // copy images from assets to build
+    .addPlugin(new CopyWebpackPlugin([
+        { from: './local/assets/images', to: 'images' }
+    ]))
+
+    // Adds a JavaScript file that should be webpacked: will output as local/build/main.js
     .addEntry('main', './local/assets/scripts/main.js')
 
     .enableVueLoader()
 
-    // will output as web/build/global.css
+    // Adds a CSS/SASS/LESS file that should be webpacked: will output as local/build/global.css
     .addStyleEntry('global', './local/assets/styles/global.scss')
 
     // allow sass/scss files to be processed
@@ -39,19 +45,22 @@ Encore
 
     // https://webpack.js.org/plugins/define-plugin/
     .configureDefinePlugin((options) => {
-        options.DEBUG =  !Encore.isProduction();
+        options.DEBUG = !Encore.isProduction();
     })
 
-    // create hashed filenames (e.g. app.abc123.css)
+    // create hashed filenames (e.g. main.abc123.css)
 
     .configureFilenames({
-      js: '[name].[hash:8].js',
+        js: '[name].[hash:8].js',
     })
-  
+
     .enableVersioning()
+
+    // show local build notifications
+    .enableBuildNotifications()
 ;
 
-var config =  Encore.getWebpackConfig();
+var config = Encore.getWebpackConfig();
 config.externals = {
     jquery: 'jQuery',
     BX: 'BX'

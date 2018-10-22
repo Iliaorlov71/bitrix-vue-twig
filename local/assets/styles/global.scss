@@ -1,6 +1,11 @@
+//@import 'fonts';
+
 @import 'variables';
 @import 'mixins';
 @import 'normalize';
+@import 'fonts';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
 @import 'blocks/page';
 @import 'blocks/header';
 @import 'blocks/footer';

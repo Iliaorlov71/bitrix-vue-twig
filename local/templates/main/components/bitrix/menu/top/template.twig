@@ -1,9 +1,34 @@
-<nav class="top-nav">
-    {% for item in result %}
-        <a href="{{ item.LINK }}"
-           class="top-nav__link {{ item.SELECTED ? 'top-nav__link_selected' }}"
-        >
-            {{ item.TEXT }}
-        </a>
-    {% endfor %}
+<nav class="top-nav container-semiboxed">
+    <ul class="top-nav__list flex-row justify-content-end">
+        {% for item in result %}
+            {% if item.PARAMS.IS_PARENT == true %}
+                <li class="top-nav__item">
+                    <div class="dropdown">
+                        <a href="{{ item.LINK }}"
+                           class="btn btn-secondary dropdown-toggle top-nav__link {{ item.SELECTED ? 'top-nav__link_selected' }} col-md-auto"
+                           role="button" id="dropdownMenuLink"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        >
+                            {{ item.TEXT }}
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+
+                </li>
+            {% else %}
+                <li class="top-nav__item">
+                    <a href="{{ item.LINK }}"
+                       class="top-nav__link {{ item.SELECTED ? 'top-nav__link_selected' }} col-md-auto"
+                    >
+                        {{ item.TEXT }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </nav>

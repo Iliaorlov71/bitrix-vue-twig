@@ -44,7 +44,8 @@
     "stylelint-scss": "^2.1.0",
     "vue-loader": "^13.6.1",
     "vue-template-compiler": "^2.5.13",
-    "webpack-notifier": "^1.7.0"
+    "webpack-notifier": "^1.7.0",
+    "webpack-px-to-rem": "^0.1.1"
   },
   "dependencies": {
     "bootstrap": "^4.1.3",

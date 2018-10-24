@@ -1,8 +1,22 @@
 <?
 $aMenuLinks = Array(
     Array(
-        "О нас",
-        "/about/",
+        "Главная",
+        "/main/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Посетителям",
+        "/customers/",
+        Array(),
+        Array("IS_PARENT"=>"1"),
+        ""
+    ),
+    Array(
+        "Новости",
+        "/news/",
         Array(),
         Array(),
         ""
@@ -14,19 +28,6 @@ $aMenuLinks = Array(
         Array(),
         ""
     ),
-    Array(
-        "Новости",
-        "/news/",
-        Array(),
-        Array(),
-        ""
-    ),
-    Array(
-        "Помощь",
-        "/support/",
-        Array(),
-        Array(),
-        ""
-    ),
+
 );
 ?>

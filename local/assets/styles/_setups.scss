@@ -11,42 +11,25 @@ html {
 }
 
 body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   font-family: $opensans_regular;
   display: flex;
   flex-direction: column;
   font-size: $font-family-base;
+  position: relative;
 
   &.body-hidden {
     overflow: hidden !important;
   }
 }
 
-.page {
-  &__top {
-    min-height: 100%;
-    position: relative;
-    overflow: hidden;
-    flex: 1 0 auto;
-  }
-
-  &__middle {
-    margin: 0 auto;
-
-  }
-
-  &__content {
-    padding: 10px 50px;
-  }
-
-  &__bottom {
-    background: #ebebeb;
-    flex-shrink: 0;
-    font-size: 16px;
-  }
+.main {
+  flex: 1;
+  padding-top: 70px;
+  position: relative;
+  transition: all 0.4s ease;
 }
-
 
 ul {
   padding: 0;
@@ -72,44 +55,15 @@ a {
   text-decoration: none;
 }
 
-.flex {
-  display: flex;
-
-  &-row {
-    display: flex;
-    flex-direction: row;
-
-    &_main-center {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    &_cross-center {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-
-  &-col {
-    display: flex;
-    flex-direction: column;
-
-    &_main-center {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    &_cross-center {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+.no-padding-right {
+  padding-right: 0;
 }
 
-.icon {
-  width: 100%;
+.no-padding-left {
+  padding-left: 0;
+}
+
+.no-padding-both {
+  padding-right: 0;
+  padding-left: 0;
 }

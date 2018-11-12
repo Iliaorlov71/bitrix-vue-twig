@@ -1,34 +1,46 @@
-<nav class="top-nav container-semiboxed">
-    <ul class="top-nav__list flex-row justify-content-end">
-        {% for item in result %}
-            {% if item.PARAMS.IS_PARENT == true %}
-                <li class="top-nav__item">
-                    <div class="dropdown">
+<!-- menu -->
+<nav class="navbar navbar-expand-md top-nav no-padding-right">
+    <!-- hamburger -->
+    <button class="navbar-toggler navbar-toggler-right top-nav__hamburger" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="navbar-toggler-icon fas fa-bars hamburger-icon"></i>
+    </button>
+    <!-- / hamburger -->
+
+    <div class="collapse navbar-collapse top-nav__collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav top-nav__list d-flex">
+            {% for item in result %}
+                {% if item.PARAMS.IS_PARENT == true %}
+                    <li class="nav-item dropdown top-nav__item">
                         <a href="{{ item.LINK }}"
-                           class="btn btn-secondary dropdown-toggle top-nav__link {{ item.SELECTED ? 'top-nav__link_selected' }} col-md-auto"
-                           role="button" id="dropdownMenuLink"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                           class="nav-link dropdown-toggle top-nav__link {{ item.SELECTED ? 'top-nav__link_selected' }} col-md-auto"
+                           role="button"
+                           data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
                         >
                             {{ item.TEXT }}
                         </a>
 
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Dropdown 1</a>
+                            <a class="dropdown-item" href="#">Dropdown 2</a>
+                            <a class="dropdown-item" href="#">Dropdown 3</a>
                         </div>
-                    </div>
+                    </li>
+                {% else %}
+                    <li class="nav-item top-nav__item">
+                        <a href="{{ item.LINK }}"
+                           class="nav-link top-nav__link {{ item.SELECTED ? 'top-nav__link_selected' }}"
+                        >
+                            {{ item.TEXT }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
 
-                </li>
-            {% else %}
-                <li class="top-nav__item">
-                    <a href="{{ item.LINK }}"
-                       class="top-nav__link {{ item.SELECTED ? 'top-nav__link_selected' }} col-md-auto"
-                    >
-                        {{ item.TEXT }}
-                    </a>
-                </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
 </nav>
+<!-- / menu -->

@@ -15,9 +15,9 @@ $APPLICATION->SetPageProperty("page_type", "main");
 
     <div class="container">
         <div class="row">
-            <div class="col">1</div>
-            <div class="col">2</div>
-            <div class="col">3</div>
+            <div class="col">Lorem ipsum dolor sit amet</div>
+            <div class="col">Lorem ipsum dolor sit amet</div>
+            <div class="col">Lorem ipsum dolor sit amet</div>
         </div>
     </div>
 

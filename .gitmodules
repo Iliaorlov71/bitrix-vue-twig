@@ -1,0 +1,3 @@
+[submodule "bitrix"]
+	path = bitrix
+	url = selectel:/var/www/git/bitrix/standart.git

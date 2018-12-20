@@ -3,7 +3,6 @@
 /bower_components/
 /vendor/
 
-/bitrix
 /upload
 
 /local/build

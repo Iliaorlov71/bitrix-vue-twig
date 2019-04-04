@@ -8,8 +8,13 @@
     "codecrumbs": "codecrumbs -d \"local/assets/scripts/\" -e \"local/assets/scripts/main.js\" ; exit 0",
     "lint:scripts": "eslint \"local/assets/scripts/**/*.+(js|vue)\" ; exit 0",
     "lint:styles": "stylelint \"local/assets/styles/**/*.scss\" ; exit 0",
+    "lint:php": "composer lint:php ; exit 0",
     "fix:scripts": "eslint \"local/assets/scripts/**/*.+(js|vue)\" --fix; exit 0",
-    "fix:styles": "stylefmt -r \"local/assets/styles/**/*.scss\" ; exit 0"
+    "fix:styles": "stylelint \"local/assets/styles/**/*.scss\" --fix ; exit 0",
+    "fix:php": "composer fix:php ; exit 0",
+    "dev": "encore dev",
+    "prod": "encore prod",
+    "watch": "encore dev --watch"
   },
   "repository": {
     "type": "git",
@@ -36,18 +41,14 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-vue": "^2.1.0",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "stylefmt": "^6.0.3",
-    "stylelint": "^9.10.1",
-    "stylelint-config-sass-guidelines": "^4.0.1",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^6.0.6",
+    "stylelint": "^9.6.0",
+    "stylelint-config-sass-guidelines": "^5.2.0",
     "stylelint-order": "^0.7.0",
-    "stylelint-scss": "^2.1.0",
-    "vue-loader": "^15.7.0",
-    "vue-template-compiler": "^2.6.7",
-    "webpack-notifier": "^1.7.0"
+    "stylelint-scss": "^2.3.0",
+    "vue-loader": "^13.7.1",
+    "vue-template-compiler": "^2.5.13"
   },
   "dependencies": {
     "2gis-maps": "^3.5.5",

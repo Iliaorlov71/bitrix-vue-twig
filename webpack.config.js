@@ -17,6 +17,9 @@ Encore
         { from: './local/assets/images', to: 'images' }
     ]))
 
+    //
+    .disableSingleRuntimeChunk()
+
     // Adds a JavaScript file that should be webpacked: will output as local/build/main.js
     .addEntry('main', './local/assets/scripts/main.js')
 

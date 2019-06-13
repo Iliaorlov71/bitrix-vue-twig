@@ -3,7 +3,7 @@ let Encore = require('@symfony/webpack-encore');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 Encore
-// directory where all compiled assets will be stored
+    // directory where all compiled assets will be stored
     .setOutputPath('./local/build/')
 
     // what's the public path to this directory (relative to your project's document root dir)
@@ -17,7 +17,7 @@ Encore
         { from: './local/assets/images', to: 'images' }
     ]))
 
-    //
+    // Tell Webpack to *not* output a separate runtime.js file.
     .disableSingleRuntimeChunk()
 
     // Adds a JavaScript file that should be webpacked: will output as local/build/main.js

@@ -1,0 +1,17 @@
+.logo {
+  margin-left: 50px;
+
+  &__link {
+    display: block;
+
+    i {
+      color: $white;
+    }
+
+    &:hover {
+      i {
+        color: $yellow;
+      }
+    }
+  }
+}

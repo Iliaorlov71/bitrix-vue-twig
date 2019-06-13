@@ -6,6 +6,12 @@
 @import 'fonts';
 
 @import 'setups';
+@import 'common';
 
 @import 'blocks/header';
+@import 'blocks/logo';
+@import 'blocks/nav';
 @import 'blocks/footer';
+
+// Главная страница
+@import 'blocks/mainFirstSection';

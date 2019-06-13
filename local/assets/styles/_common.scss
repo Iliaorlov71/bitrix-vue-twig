@@ -1,0 +1,28 @@
+// Общие стили проекта
+
+.main {
+  flex: 1;
+  position: relative;
+  transition: all 0.4s ease;
+  background-color: #F9FAFC;
+}
+
+.section {
+  margin-top: 50px;
+}
+
+.title {
+  font-family: $opensans_bold;
+  font-size: 2rem;
+  color: #0c74d5;
+}
+
+.subtitle {
+  font-family: $opensans_semibold;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.text {
+  margin-top: 10px;
+}

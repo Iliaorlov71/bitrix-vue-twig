@@ -1,3 +1,3 @@
-<div class="footer__text flex-row">
-    &copy; 2018 Copyright.
+<div class="footer__copyright flex-row">
+    &copy; 2019 Copyright.
 </div>

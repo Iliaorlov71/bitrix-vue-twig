@@ -2,32 +2,10 @@
 $aMenuLinks = Array(
     Array(
         "Главная",
-        "/main/",
+        "/",
         Array(),
         Array(),
         ""
     ),
-    Array(
-        "Посетителям",
-        "/customers/",
-        Array(),
-        Array("IS_PARENT"=>"1"),
-        ""
-    ),
-    Array(
-        "Новости",
-        "/news/",
-        Array(),
-        Array(),
-        ""
-    ),
-    Array(
-        "Контакты",
-        "/contacts/",
-        Array(),
-        Array(),
-        ""
-    ),
-
 );
 ?>

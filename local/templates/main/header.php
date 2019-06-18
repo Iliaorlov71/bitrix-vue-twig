@@ -16,7 +16,6 @@
 
 </head>
 <body class="page page_<?= LANGUAGE_ID ?> page_<?php $APPLICATION->ShowProperty('page_type', 'secondary') ?>">
-<?php $APPLICATION->ShowPanel() ?>
 
     <!-- wrapper -->
     <div class="wrapper">

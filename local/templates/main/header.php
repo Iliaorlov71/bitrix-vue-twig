@@ -8,7 +8,8 @@
     <?php CJSCore::Init('jquery2') ?>
 
     <?php
-    $assetManager = new Local\Util\Assets();
+    $sPath2Build = (env('DEBUG')) ? 'local/build/' : 'local/dist/';
+    $assetManager = new Local\Util\Assets($sPath2Build);
     ?>
 
     <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1">

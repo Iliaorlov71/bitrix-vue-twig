@@ -46,6 +46,11 @@
                 ); ?>
             </div>
         </div>
+
+        <!--  Панель Битрикса  -->
+        <?php $APPLICATION->ShowPanel() ?>
+        <!-- / Панель Битрикса  -->
+
     </footer>
     <!-- / footer -->
     <script src="<?= $assetManager->getEntry('main.js') ?>"></script>

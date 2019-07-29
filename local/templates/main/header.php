@@ -21,8 +21,6 @@
     <!-- wrapper -->
     <div class="wrapper">
 
-        <?php $APPLICATION->ShowPanel() ?>
-
         <!--подключение twig-->
         <?php
 

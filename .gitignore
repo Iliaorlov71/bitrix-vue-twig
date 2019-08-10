@@ -6,6 +6,7 @@
 /upload
 
 /local/build
+/local/php_interface/custom_mail.php
 
 *.log
 

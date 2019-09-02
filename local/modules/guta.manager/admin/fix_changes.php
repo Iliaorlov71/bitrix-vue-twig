@@ -27,7 +27,7 @@ $arPost = array(
     'fix_changes_message' => filter_input(INPUT_POST, 'fix_changes_message', FILTER_SANITIZE_STRING),
 );
 
-if (!empty($arPost['fix_changes_fio']) && $arPost['fix_change'] == 'Y') {
+if ( !empty($arPost['fix_changes_fio']) && $arPost['fix_change'] == 'Y') {
     Git::fixChange($arPost['fix_changes_fio'] . ': ' . $arPost['fix_changes_message'], true, false);
 
     /* @internal Отправить письмо об изменениях на почту */
@@ -36,7 +36,7 @@ if (!empty($arPost['fix_changes_fio']) && $arPost['fix_change'] == 'Y') {
         'MESSAGE' => $arPost['fix_changes_message'],
     );
     CEvent::SendImmediate('FIX_CHANGES_MANAGER', 's1', $arFields);
-} elseif (empty($arPost['fix_changes_fio']) && $arPost['fix_change'] == 'Y') {
+} elseif(empty($arPost['fix_changes_fio']) && $arPost['fix_change'] == 'Y') {
     ShowError("Заполните, пожалуйста, ФИО.");
 }
 
@@ -92,7 +92,7 @@ if (!empty($arPost['fix_changes_fio']) && $arPost['fix_change'] == 'Y') {
             <button class="adm-btn">Зафиксировать изменнения</button>
         </form>
 
-    </div>
+        </div>
     </div>
 
 <?php

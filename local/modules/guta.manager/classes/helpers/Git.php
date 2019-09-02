@@ -2,10 +2,6 @@
 
 namespace Guta\Modules\Manager\Helpers;
 
-
-use CAdminMessage;
-use CUtil;
-
 /**
  * Класс для работы в консольном гите.
  * Class Git
@@ -67,7 +63,7 @@ class Git
         self::setCommand(
             self::getPrefix() .
             'commit -a -m "[Guta.Manager] ' .
-            CUtil::translit(
+            \CUtil::translit(
                 $sMessage,
                 'ru',
                 array('max_len' => 300, 'replace_space' => ' ', 'change_case' => false, 'safe_chars' => ':,?!')) .
@@ -100,7 +96,7 @@ class Git
 
         if (!$bSilent) {
 
-            CAdminMessage::ShowNote('Результат:' . PHP_EOL . implode(PHP_EOL, $arMessages));
+            \CAdminMessage::ShowNote('Результат:' . PHP_EOL . implode(PHP_EOL, $arMessages));
         }
     }
 }

@@ -1,11 +1,10 @@
 <?php
-
-use Bitrix\Main\Loader;
 use Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);
 
-if (!Loader::includeModule('highloadblock')) {
+if (!\Bitrix\Main\Loader::includeModule('highloadblock'))
+{
     return false;
 }
 
@@ -14,7 +13,8 @@ $items = array();
 
 
 // export / import
-if ($USER->isAdmin()) {
+if ($USER->isAdmin())//@todo add access
+{
     $items[] = array(
         'text' => 'Фиксация изменений',
         'url' => 'fix_changes.php',
@@ -26,7 +26,8 @@ if ($USER->isAdmin()) {
 }
 
 // menu
-if (!empty($items)) {
+if (!empty($items))
+{
     return array(
         'parent_menu' => 'global_menu_content',
         'sort' => 350,
@@ -39,6 +40,8 @@ if (!empty($items)) {
         'items_id' => 'menu_guta_manager',
         'items' => $items
     );
-} else {
+}
+else
+{
     return false;
 }

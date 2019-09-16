@@ -1,0 +1,14 @@
+{
+  "entrypoints": {
+    "main": {
+      "js": [
+        "local/dist/main.7736a690.js"
+      ]
+    },
+    "global": {
+      "css": [
+        "local/dist/global.6b3b8fc9.css"
+      ]
+    }
+  }
+}

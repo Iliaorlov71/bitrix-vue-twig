@@ -2,12 +2,12 @@
   "entrypoints": {
     "main": {
       "js": [
-        "/local/dist/main.3746a1f8.js"
+        "/local/dist/main.6b7db688.js"
       ]
     },
     "global": {
       "css": [
-        "/local/dist/global.57a68328.css"
+        "/local/dist/global.d7ac3a9b.css"
       ]
     }
   }

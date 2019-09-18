@@ -3,8 +3,7 @@
 import Vue from 'vue';
 import vueInvoker from '../util/vueInvoker';
 import vueCollection from '../vue/collection';
-
-//adds bootstrap.js from node_modules
+// adds bootstrap.js from node_modules
 import 'bootstrap';
 
 export default {

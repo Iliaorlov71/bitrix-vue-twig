@@ -1,43 +1,40 @@
 .nav {
   display: none;
   width: 100%;
-
-  &.active {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100vh;
-    padding: 25px 25px 20px 37px;
-    background-color: #eff3e0;
-  }
-
   @include media-breakpoint-up(xl) {
     display: block;
+  }
+
+  &.active {
+    background-color: #eff3e0;
+    bottom: 0;
+    display: block;
+    height: 100vh;
+    left: 0;
+    padding: 25px 25px 20px 37px;
+    position: fixed;
+    right: 0;
+    top: 0;
   }
 
   &__list {
     display: flex;
     flex-direction: row;
     margin-top: 25px;
-
-    &.active {
-      flex-direction: column;
-    }
-
     @include media-breakpoint-up(xl) {
       display: flex;
       margin-top: 0;
     }
+
+    &.active {
+      flex-direction: column;
+    }
   }
 
   &__item {
+    font-family: $opensans_semibold;
     margin-left: 0;
     margin-top: 15px;
-    font-family: $opensans_semibold;
-
     @include media-breakpoint-up(xl) {
       margin-left: 30px;
       margin-top: 0;
@@ -53,32 +50,30 @@
   }
 
   &__link {
-    position: relative;
-    display: block;
-    padding-bottom: 6px;
-    overflow: hidden;
-    outline: none;
-    font-size: 1.8rem;
     color: $black;
-
+    display: block;
+    font-size: 1.8rem;
+    outline: none;
+    overflow: hidden;
+    padding-bottom: 6px;
+    position: relative;
     @include media-breakpoint-up(md) {
       font-size: 2rem;
     }
-
     @include media-breakpoint-up(xl) {
-      font-size: 1rem;
       color: $white;
+      font-size: 1rem;
     }
 
     &:after {
-      content: '';
-      position: absolute;
+      background-color: #cea200;
       bottom: 0;
-      left: 0;
-      width: 0;
+      content: '';
       height: 2px;
-      background-color: #CEA200;
-      transition: .3s;
+      left: 0;
+      position: absolute;
+      transition: 0.3s;
+      width: 0;
     }
 
     &:hover {
@@ -98,11 +93,10 @@
 }
 
 .hamburger {
+  color: $black;
   display: block;
   margin-left: 30px;
-  color: $black;
-
-  @include media-breakpoint-up(xl){
+  @include media-breakpoint-up(xl) {
     display: none;
   }
 
@@ -112,12 +106,12 @@
 }
 
 .menu__closeBtn {
+  color: $black;
   display: none;
   position: absolute;
-  top: 30px;
   right: 30px;
+  top: 30px;
   z-index: 10;
-  color: $black;
 
   &:hover {
     color: $black;

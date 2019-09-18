@@ -1,7 +1,7 @@
 {
-  "local/dist/global.css": "/local/dist/global.6b3b8fc9.css",
-  "local/dist/main.js": "/local/dist/main.7736a690.js",
-  "local/dist/2.7736a690.js": "/local/dist/2.7736a690.js",
+  "local/dist/0.6b7db688.js": "/local/dist/0.6b7db688.js",
+  "local/dist/global.css": "/local/dist/global.d7ac3a9b.css",
+  "local/dist/main.js": "/local/dist/main.6b7db688.js",
   "local/dist/fonts/fa-brands-400.eot": "/local/dist/fonts/fa-brands-400.14c590d1.eot",
   "local/dist/fonts/fa-brands-400.woff2": "/local/dist/fonts/fa-brands-400.3e1b2a65.woff2",
   "local/dist/fonts/fa-brands-400.ttf": "/local/dist/fonts/fa-brands-400.5e8aa9ea.ttf",
@@ -30,7 +30,6 @@
   "local/dist/fonts/opensans-semibold-webfont.ttf": "/local/dist/fonts/opensans-semibold-webfont.693fd794.ttf",
   "local/dist/fonts/opensans-semibold-webfont.eot": "/local/dist/fonts/opensans-semibold-webfont.75745bac.eot",
   "local/dist/fonts/opensans-semibold-webfont.woff2": "/local/dist/fonts/opensans-semibold-webfont.f0618d72.woff2",
-  "local/dist/global.6b3b8fc9.css.map": "/local/dist/global.6b3b8fc9.css.map",
   "local/dist/images/fa-brands-400.svg": "/local/dist/images/fa-brands-400.bfa9c38b.svg",
   "local/dist/images/fa-regular-400.svg": "/local/dist/images/fa-regular-400.95f13e0b.svg",
   "local/dist/images/fa-solid-900.svg": "/local/dist/images/fa-solid-900.6ed5e3bc.svg",

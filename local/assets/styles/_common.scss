@@ -1,10 +1,10 @@
 // Общие стили проекта
 
 .main {
+  background-color: #f9fafc;
   flex: 1;
   position: relative;
   transition: all 0.4s ease;
-  background-color: #F9FAFC;
 }
 
 .section {
@@ -12,15 +12,15 @@
 }
 
 .title {
+  color: #0c74d5;
   font-family: $opensans_bold;
   font-size: 2rem;
-  color: #0c74d5;
 }
 
 .subtitle {
   font-family: $opensans_semibold;
-  margin-top: 15px;
   font-size: 1.5rem;
+  margin-top: 15px;
 }
 
 .text {

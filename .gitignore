@@ -13,8 +13,6 @@
 hosts.yml
 
 .env
-*.lock*
-*-lock*
 
 .idea
 

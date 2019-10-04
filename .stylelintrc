@@ -1,8 +1,12 @@
 {
-  "extends": "stylelint-config-sass-guidelines",
+  "extends": [
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-rational-order"
+  ],
   "rules": {
     "scss/dollar-variable-pattern": ".*",
     "max-nesting-depth": 3,
-    "selector-class-pattern": ".*"
+    "selector-class-pattern": ".*",
+    "order/properties-alphabetical-order": null
   }
 }

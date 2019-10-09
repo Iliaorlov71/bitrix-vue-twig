@@ -35,6 +35,8 @@ Encore
 
   // allow sass/scss files to be processed
   .enableSassLoader()
+  .enablePostCssLoader()
+
   //    For css-loader@^3.1
   // .configureCssLoader((options) => {
   //   // eslint-disable-next-line no-unused-expressions,no-sequences

@@ -1,5 +1,7 @@
 /** @global jQuery */
 
+import '@babel/polyfill';
+
 // import local dependencies
 import Router from './util/Router';
 

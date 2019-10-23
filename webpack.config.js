@@ -1,6 +1,7 @@
 // webpack.config.js
 const Encore = require('@symfony/webpack-encore');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 Encore
 // directory where all compiled assets will be stored
@@ -19,6 +20,7 @@ Encore
     {
       from: './local/assets/images',
       to: 'images',
+      ignore: ['icons/**/*.svg'],
     },
   ]))
 
@@ -36,6 +38,32 @@ Encore
   // allow sass/scss files to be processed
   .enableSassLoader()
   .enablePostCssLoader()
+
+  /*
+      * Add SVG sprite
+      *
+      * Examole:
+      *   <svg><use xlink:href="#sprite-burger"></use></svg>
+      *
+      * https://github.com/cascornelissen/svg-spritemap-webpack-plugin
+      * */
+  .addPlugin(
+    new SVGSpritemapPlugin('./local/assets/images/icons/**/*.svg', {
+      output: {
+        filename: 'images/icons.svg',
+        svgo: {
+          plugins: [{
+            convertColors: {
+              currentColor: true,
+            },
+            addAttributesToSVGElement: {
+              attributes: { fill: 'currentColor' },
+            },
+          }]
+        },
+      },
+    }),
+  )
 
   //    For css-loader@^3.1
   // .configureCssLoader((options) => {

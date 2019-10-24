@@ -18,7 +18,7 @@
 </head>
 <body class="page page_<?= LANGUAGE_ID ?> page_<?php $APPLICATION->ShowProperty('page_type', 'secondary') ?>">
     <!-- SVG icons-->
-    <div style="display: none;"><?=file_get_contents($sPath2Build.'/images/icons.svg')?></div>
+    <div style="display: none;"><?=file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/' . $sPath2Build.'/images/icons.svg')?></div>
 
     <!-- wrapper -->
     <div class="wrapper">

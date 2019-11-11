@@ -20,29 +20,15 @@ git clone www_test:git/bitrix-build.git ./
 
 ### Зависимости
 
-- Установить зависимости composer (frontend):
+- Установить зависимости composer (backend):
 ```sh
 composer install
 ```
 
-- Установить зависимости npm (backend):
+- Установить зависимости npm (frontend):
 ```sh
 npm install
 ```
-
-### Bitrix
-
-- Удалить папку bitrix
-- Инициализировать submodule:
-```sh
-git submodule init
-```
-
-- Запустить submodule (cклонируется bitrix):
-```sh
-git submodule update
-```
-
 ### Символьные ссылки
 
 Перенести в корень клонированного проекта содержимое директорий `bitrix`, `upload` и `local` 

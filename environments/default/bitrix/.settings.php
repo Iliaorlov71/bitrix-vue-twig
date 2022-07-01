@@ -1,6 +1,5 @@
 <?php
 
-
 if (!file_exists($autoloadPath = realpath(__DIR__).'/../vendor/autoload.php')) {
 
     $autoloadPath = realpath(__DIR__).'/../../current/vendor/autoload.php';
@@ -11,6 +10,7 @@ require_once($autoloadPath) ;
 $dotenv = new Dotenv\Dotenv(realpath(__DIR__.'/../'));
 $dotenv->load();
 
+/*
 $cache = array (
     'value' => array (
         'type' => 'files',
@@ -33,7 +33,7 @@ if (env('USE_MEMCACHE')) {
         'readonly' => false
     );
 }
-
+*/
 
 return array (
     'utf_mode' =>
@@ -63,18 +63,13 @@ return array (
         array (
             'value' =>
                 array (
-                    'debug' => env('DEBUG', false),
+                    'debug' =>  env('DEBUG', false),
                     'handled_errors_types' => 4437,
                     'exception_errors_types' => 4437,
                     'ignore_silence' => false,
                     'assertion_throws_exception' => true,
                     'assertion_error_type' => 256,
-                    'log' => array(
-                        'class_name' => '\Bex\Monolog\ExceptionHandlerLog',
-                        'settings' => array(
-                            'logger' => 'app'
-                        ),
-                    ),
+                    'log' => NULL,
                 ),
             'readonly' => false,
         ),
@@ -94,5 +89,12 @@ return array (
                 ),
             'readonly' => true,
         ),
-    'cache' => $cache,
+    'crypto' =>
+        array (
+            'value' =>
+                array (
+                    'crypto_key' => '2f8158d8941c4c71fa80065cfbb516fb',
+                ),
+            'readonly' => true,
+        ),
 );

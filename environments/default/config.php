@@ -1,4 +1,4 @@
-<?php
+    <?php
 /**
  * Example of settings file config.php:
  *
@@ -61,7 +61,7 @@
 
 return [
     // License key for Bitrix
-    'licenseKey' => 'DEMO',
+    'licenseKey' => 'S20-NA-2KAHFBVDAC5JTPMB',
     'options' => [
         'main' => [
             'site_name' => 'Имя сайта',
